@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base: strict Black & White Pixel Art ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none;
+  font-smoothing: none;
+  background-color: #ffffff;
+  color: #000000;
+  /* pixel grid pattern overlay */
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 8px 8px;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Subtle scanline overlay for CRT feel */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.03) 3px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  z-index: 9999;
+}
+
+/* Focus ring — visible, B&W only */
+:focus-visible {
+  outline: 4px solid #000000;
+  outline-offset: 2px;
+}
+
+/* Pixel divider utility */
+.pixel-divider {
+  width: 100%;
+  height: 4px;
+  background-image: repeating-linear-gradient(
+    to right,
+    #000000 0px,
+    #000000 8px,
+    #ffffff 8px,
+    #ffffff 16px
+  );
+}
+
+/* Invert-on-hover utility used by buttons */
+.btn-pixel {
+  font-family: 'Press Start 2P', monospace;
+  background: #ffffff;
+  color: #000000;
+  border: 4px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0s, color 0s, transform 0.05s, box-shadow 0.05s;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+.btn-pixel:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.btn-pixel:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blink,
+  .animate-load,
+  .animate-scanline {
+    animation: none;
+  }
+  .animate-load {
+    width: 50%;
+  }
+}
