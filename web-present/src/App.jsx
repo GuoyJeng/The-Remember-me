@@ -34,7 +34,7 @@ const projectResources = [
     type: 'POSTER.PDF',
     title: 'PROJECT POSTER',
     description: 'Open the project poster and overview board.',
-    href: 'https://github.com/user-attachments/assets/2f8119ab-4e52-464f-9ff8-bca8b263558e',
+    href: 'https://drive.google.com/file/d/1mtV2LsArOBwWM8FE5hLzeVkeXBHZ4h_w/view?usp=sharing',
   },
   {
     type: 'VIDEO.YOUTUBE',
