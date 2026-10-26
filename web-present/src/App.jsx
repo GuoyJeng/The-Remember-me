@@ -10,19 +10,49 @@ const gameSteps = [
 ];
 
 const hardware = [
-  { id: '01', name: 'ARDUINO UNO R4', role: 'MAIN CONTROLLER' },
-  { id: '02', name: 'LCD DISPLAY', role: 'SYSTEM OUTPUT' },
-  { id: '03', name: '4× LED LIGHTS', role: 'PATTERN SIGNAL' },
+  { id: '01', name: 'Arduino UNO R4 WiFi', role: 'MAIN CONTROLLER' },
+  { id: '02', name: 'LCD display', role: 'SYSTEM OUTPUT' },
+  { id: '03', name: '4× LED LIGHT', role: 'PATTERN SIGNAL' },
   { id: '04', name: '4× BUTTONS', role: 'PLAYER INPUT' },
+  { id: '05', name: 'Buzzer', role: 'SOUND OUTPUT' },
+  { id: '06', name: 'Breadboard', role: 'BASE BOARD' },
+  { id: '07', name: 'Resistors', role: 'CURRENT LIMITER' },
+  { id: '08', name: 'Jumper wires', role: 'CIRCUIT CONNECTION' },
 ];
 
-const tools = ['VITE + REACT', 'TAILWIND CSS', 'GOOGLE SHEETS', 'ARDUINO WIFI R4'];
+const tools = ['VITE', 'TAILWIND CSS', 'Node.js และ npm', 'Git', 'Google Sheets'];
 
 const contributors = [
   { name: 'นายพงศภัค บุญสนธิ', id: '68070111', photo: 'https://github.com/user-attachments/assets/9db36b67-555c-4d97-8e5d-1cdbd8f4d35a' },
   { name: 'นายปิยวัฒน์ ศุภพรฐากร', id: '68070106', photo: 'https://github.com/user-attachments/assets/f35e2995-9285-4d16-b0a7-e97d688ba469' },
   { name: 'นายภูรินท์ ลือประเสริฐ', id: '68070145', photo: 'https://github.com/user-attachments/assets/16475490-8b61-4c5e-b7c9-431076199f45'},
-  { name: 'ชื่อลาบคุง', id: '68070204', photo: 'https://github.com/user-attachments/assets/d59977e1-9fa6-4640-b5fb-62ad2b1c6489' },
+  { name: 'นายอภิรักษ์ นพเคราะห์', id: '68070204', photo: 'https://github.com/user-attachments/assets/d59977e1-9fa6-4640-b5fb-62ad2b1c6489' },
+];
+
+const projectResources = [
+  {
+    type: 'POSTER.PDF',
+    title: 'PROJECT POSTER',
+    description: 'Open the project poster and overview board.',
+    href: 'https://github.com/user-attachments/assets/2f8119ab-4e52-464f-9ff8-bca8b263558e',
+  },
+  {
+    type: 'VIDEO.YOUTUBE',
+    title: 'VIDEO PRESENTATION',
+    description: 'Presentation link will be added here.',
+  },
+  {
+    type: 'WEB.LIVE',
+    title: 'PROJECT WEBSITE',
+    description: 'Launch the live Remember Me experience.',
+    href: 'https://the-remember-me.vercel.app',
+  },
+  {
+    type: 'SOURCE.GIT',
+    title: 'SOURCE CODE',
+    description: 'Browse the Arduino, web, and Apps Script code.',
+    href: 'https://github.com/GuoyJeng/The-Remember-me',
+  },
 ];
 
 function scrollToSection(id) {
@@ -80,14 +110,14 @@ function SiteHeader({ soundEnabled, onToggleSound }) {
         <a href="#team" className="border-b-2 border-transparent pb-1 hover:border-black">TEAM</a>
       </nav>
 
-      <button
+      {/* <button
         type="button"
         aria-pressed={soundEnabled}
         onClick={onToggleSound}
         className="border-2 border-black bg-white px-2 py-[10px] font-pixel text-[7px] shadow-[3px_3px_0_#000] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none sm:px-3 sm:text-[8px]"
       >
         {soundEnabled ? '◢ SOUND: ON' : '× SOUND: OFF'}
-      </button>
+      </button> */}
     </header>
   );
 }
@@ -148,13 +178,6 @@ function Hero({ readMode, onToggleReadMode }) {
 
         <div className="mt-8 flex flex-wrap items-center gap-6">
           <PixelButton onClick={() => scrollToSection('#about')}>READ THE BRIEF ↓</PixelButton>
-          <button
-            type="button"
-            onClick={onToggleReadMode}
-            className="border-b-2 border-black pb-1 font-pixel text-[8px]"
-          >
-            {readMode ? 'COMPACT MODE' : 'READ MODE'} ↗
-          </button>
         </div>
       </div>
 
@@ -206,7 +229,7 @@ function OverviewSection() {
         </div>
 
         <div className="border-l-4 border-black pl-5 text-[15px] leading-7 sm:pl-7 sm:text-base">
-          Remember Me is designed to make training memory feel like a small arcade challenge. It gives players a clear pattern to follow, an instant result, and a scoreboard to make improvement visible.
+          โครงงานนี้มุ่งเน้นประโยชน์เกี่ยวกับการฝึกความจำ ประโยชน์ที่ได้จากการเล่นคือผู้เล่นได้ฝึกทักษะด้านความจำ ซึ่งสามารถช่วยฝึกความจำสำหรับผู้สูงอายุได้ด้วย 
           <br /><br />
           <strong className="font-pixel text-[9px]">TYPE:</strong> WEB DEVELOPMENT / GAME DEVELOPMENT / IOT
         </div>
@@ -325,15 +348,77 @@ function TeamSection() {
 
             return (
               <article key={person.id} className={`border-[3px] border-black p-4 shadow-pixel ${cardColors}`}>
-                <img src={person.photo} alt={person.name} className="h-[100px] w-[100px] border-[3px] border-black object-cover" />
-                {/* <div className={`grid h-[62px] w-[62px] place-items-center border-[3px] border-black font-pixel text-sm ${avatarColors}`}>
-                </div> */}
+                <div className={`mx-auto grid h-[150px] w-[150px] place-items-center overflow-hidden border-[3px] border-black font-pixel text-sm ${avatarColors}`}>
+                  <img src={person.photo} alt={person.name} className="h-full w-full object-cover object-center" />
+                </div>
                 <h3 className="mt-5 min-h-[38px] font-pixel text-[16px] leading-5">{person.name}</h3>
                 <p className="mb-0 mt-3 border-t-2 border-current pt-3 font-pixel text-[10px]">ID: {person.id}</p>
               </article>
             );
           })}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function ProjectResourcesSection() {
+  return (
+    <section id="resources" className={`${containerClass} py-20 sm:py-[110px]`}>
+      <div className="mb-11 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+        <div>
+          <h2 className={headingClass}>PROJECT LINK</h2>
+        </div>
+        <span className="font-pixel text-[8px]">4 RESOURCE SLOTS</span>
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {projectResources.map((resource) => {
+          const isAvailable = Boolean(resource.href);
+          const isInverted = false;
+          const colors = isInverted
+            ? 'bg-black text-white hover:bg-white hover:text-black'
+            : 'bg-white text-black hover:bg-black hover:text-white';
+          const iconColors = isInverted
+            ? 'border-white bg-black group-hover:border-black group-hover:bg-white'
+            : 'border-black bg-white group-hover:border-white group-hover:bg-black';
+          const filledPixel = isInverted
+            ? 'h-3 w-3 bg-white group-hover:bg-black'
+            : 'h-3 w-3 bg-black group-hover:bg-white';
+          const outlinedPixel = isInverted
+            ? 'border-white bg-black group-hover:border-black group-hover:bg-white'
+            : 'border-black bg-white group-hover:border-white group-hover:bg-black';
+          const content = (
+            <>
+              <div className={`grid h-[50px] w-[50px] place-items-center border-[3px] ${iconColors}`}>
+                <span className="grid grid-cols-2 gap-[3px]">
+                  <i className={filledPixel} />
+                  <i className={`h-3 w-3 border-[3px] ${outlinedPixel}`} />
+                  <i className={`h-3 w-3 border-[3px] ${outlinedPixel}`} />
+                  <i className={filledPixel} />
+                </span>
+              </div>
+              <p className="mt-6 font-pixel text-[8px]">{resource.type}</p>
+              <h3 className="mt-3 font-pixel text-[11px] leading-5">{resource.title}</h3>
+              <p className="mt-3 text-sm leading-6">{resource.description}</p>
+              <span className="mt-auto border-t-2 border-current pt-4 font-pixel text-[8px]">
+                {isAvailable ? 'OPEN RESOURCE ↗' : 'LINK REQUIRED'}
+              </span>
+            </>
+          );
+
+          const cardClass = `group flex min-h-[270px] flex-col border-[3px] border-black p-5 shadow-pixel transition duration-0 hover:-translate-y-1 ${colors}`;
+
+          return isAvailable ? (
+            <a key={resource.title} href={resource.href} target="_blank" rel="noreferrer" className={cardClass}>
+              {content}
+            </a>
+          ) : (
+            <article key={resource.title} className={cardClass} aria-label={`${resource.title}: link required`}>
+              {content}
+            </article>
+          );
+        })}
       </div>
     </section>
   );
@@ -355,12 +440,19 @@ function CallToAction() {
 
 function Footer() {
   return (
-    <footer className={`${containerClass} flex min-h-[100px] flex-wrap items-center justify-between gap-4`}>
-      <div className="flex items-center gap-3 font-pixel text-[9px]">
-        <PixelMark />
-        REMEMBER ME
+    <footer className="bg-black text-white">
+      <div className={`${containerClass} flex min-h-[100px] flex-wrap items-center justify-between gap-4`}>
+        <div className="flex items-center gap-3 font-pixel text-[9px]">
+          <span className="grid h-7 w-7 grid-cols-2 gap-[3px]">
+            <i className="bg-white" />
+            <i className="border-[3px] border-white bg-black" />
+            <i className="border-[3px] border-white bg-black" />
+            <i className="bg-white" />
+          </span>
+          REMEMBER ME
+        </div>
+        <p className="m-0 font-pixel text-[7px]">© 2026 PHYSICAL COMPUTING</p>
       </div>
-      <p className="m-0 font-pixel text-[7px]">© 2026 PHYSICAL COMPUTING</p>
     </footer>
   );
 }
@@ -379,6 +471,7 @@ export default function App() {
         <OverviewSection />
         <BuildSection />
         <ToolsSection />
+        <ProjectResourcesSection />
         <TeamSection />
         {/* <CallToAction /> */}
       </main>
