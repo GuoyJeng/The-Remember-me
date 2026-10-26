@@ -15,7 +15,7 @@ function Brand() {
   return (
     <a href="#top" className="flex items-center gap-3 font-pixel text-[10px] leading-[1.2] tracking-[-1px] sm:text-xs">
       <PixelMark />
-      <span>REMEMBER<br />ME</span>
+      <span>THE REMEMBER<br />ME</span>
     </a>
   );
 }

@@ -11,9 +11,9 @@ function Footer() {
             <i className="border-[3px] border-white bg-black" />
             <i className="bg-white" />
           </span>
-          REMEMBER ME
+          THE REMEMBER ME
         </div>
-        <p className="m-0 font-pixel text-[7px]">© 2026 PHYSICAL COMPUTING</p>
+        <p className="m-0 font-pixel text-[7px]">© Physical Computing Project 2026 - IT KMITL</p>
       </div>
     </footer>
   );

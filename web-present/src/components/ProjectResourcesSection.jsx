@@ -17,7 +17,7 @@ const projectResources = [
   {
     type: 'WEB.LIVE',
     title: 'PROJECT WEBSITE',
-    description: 'Launch the live Remember Me experience.',
+    description: 'Launch the live THE REMEMBER ME experience.',
     href: 'https://the-remember-me.vercel.app',
   },
   {

@@ -13,7 +13,7 @@ function ReadmePreview() {
 
       <div className="relative min-h-[310px] overflow-hidden bg-grid bg-[size:12px_12px] p-5 sm:min-h-[360px] sm:p-7">
         <div className="relative z-10 border-[3px] border-black bg-white p-4 shadow-pixel sm:p-5">
-          <p className="m-0 font-pixel text-[8px] leading-5"># PROJECT: REMEMBER ME</p>
+          <p className="m-0 font-pixel text-[8px] leading-5"># PROJECT: THE REMEMBER ME</p>
           <div className="my-4 h-[3px] w-full bg-black" />
           <p className="m-0 text-sm leading-6">[STATUS] READY PLAYER 01</p>
           <p className="mt-3 font-pixel text-[8px] leading-5">&gt; WATCH<br />&gt; REMEMBER<br />&gt; REPEAT</p>
@@ -49,7 +49,7 @@ function Hero() {
         </div>
 
         <h1 className="font-pixel text-[29px] leading-[1.28] tracking-[-2px] sm:text-[clamp(32px,4.4vw,61px)]">
-          REMEMBER<br />
+          THE REMEMBER<br />
           <span className="inline-block bg-black px-1 pb-1 pt-1 text-white">ME_</span>
         </h1>
 

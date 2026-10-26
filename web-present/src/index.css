@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-  html { scroll-behavior: smooth; }
-  body { @apply m-0 bg-white font-mono text-black antialiased; }
+  html { 
+    scroll-behavior: smooth; 
+    font-family: 'Space Mono', 'Chakra Petch', monospace;
+  }
+  body { 
+    @apply m-0 bg-white font-mono text-black antialiased; 
+    font-family: 'Space Mono', 'Chakra Petch', monospace;
+  }
   button { @apply cursor-pointer; }
 }

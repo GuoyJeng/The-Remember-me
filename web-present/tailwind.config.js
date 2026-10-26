@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        pixel: ['"Press Start 2P"', 'monospace'],
-        mono: ['"Space Mono"', 'monospace']
+        pixel: ['"Press Start 2P"', '"Chakra Petch"', 'monospace'],
+        mono: ['"Space Mono"', '"Chakra Petch"', 'monospace'],
+        chakra: ['"Chakra Petch"', 'sans-serif']
       },
       boxShadow: {
         pixel: '6px 6px 0 #000000',
