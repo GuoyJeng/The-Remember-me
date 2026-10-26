@@ -40,6 +40,7 @@ const projectResources = [
     type: 'VIDEO.YOUTUBE',
     title: 'VIDEO PRESENTATION',
     description: 'Presentation link will be added here.',
+    href: 'https://youtu.be/oftDVDsEXl8'
   },
   {
     type: 'WEB.LIVE',
