@@ -31,6 +31,12 @@
 - Git 
 - Google Sheets (ใช้สำหรับทำฐานข้อมูล Score board)
 
+**Project Poster**
+[คลิกเพื่อดูโปสเตอร์โครงงาน](https://drive.google.com/file/d/1mtV2LsArOBwWM8FE5hLzeVkeXBHZ4h_w/view)
+
+**Video presentation**
+[คลิกเพื่อชมวิดีโอสาธิตการทำงานบน YouTube](https://www.youtube.com/watch?v=oftDVDsEXl8)
+
 # Contributors
 
 | Profile Picture | Name | Student ID |
