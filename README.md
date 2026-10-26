@@ -31,11 +31,14 @@
 - Git 
 - Google Sheets (ใช้สำหรับทำฐานข้อมูล Score board)
 
-**Project Poster**
+**Project Poster** : 
 [คลิกเพื่อดูโปสเตอร์โครงงาน](https://drive.google.com/file/d/1mtV2LsArOBwWM8FE5hLzeVkeXBHZ4h_w/view)
 
-**Video presentation**
+**Video presentation** : 
 [คลิกเพื่อชมวิดีโอสาธิตการทำงานบน YouTube](https://www.youtube.com/watch?v=oftDVDsEXl8)
+
+**Web Scoreboard** : 
+[คลิกเพื่อดู Web Scoreboard](https://the-remember-me.vercel.app/)
 
 # Contributors
 
