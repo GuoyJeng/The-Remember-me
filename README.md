@@ -29,6 +29,10 @@
 - `LiquidCrystal_I2C.h`
 
 **Tools เพิ่มเติม:**
+- Vite
+- Tailwind CSS
+- Node.js และ npm
+- Git 
 - Google Sheets (ใช้สำหรับทำฐานข้อมูล Score board)
 
 # Contributors
