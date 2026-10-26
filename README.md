@@ -1,3 +1,4 @@
+<img width="488" height="960" alt="856545198_1642390627387703_2608820112443213826_n" src="https://github.com/user-attachments/assets/94f0b608-ee13-4d89-9796-08daa8b551b2" />
 ### Physical Computing Project 2026 - IT KMITL
 
 # Project's Title : Remember me (จำจนวันตาย)
@@ -42,4 +43,4 @@
 | <img width="500" height="500" alt="20250114_192953" src="https://github.com/user-attachments/assets/9db36b67-555c-4d97-8e5d-1cdbd8f4d35a" /> | นายพงศภัค บุญสนธิ | 68070111 |
 | <img width="500" height="500" alt="866472779_1088069020690591_7343179505840928708_n" src="https://github.com/user-attachments/assets/f35e2995-9285-4d16-b0a7-e97d688ba469" /> | นายปิยวัฒน์ ศุภพรฐากร | 68070106 |
 | <img width="500" height="500" alt="747408874_1041382838260896_3336317166686547153_n" src="https://github.com/user-attachments/assets/16475490-8b61-4c5e-b7c9-431076199f45" /> | นายภูรินท์ ลือประเสริฐ | 68070145 |
-|<img width="500" height="500" alt="856545198_1642390627387703_2608820112443213826_n" src="https://github.com/user-attachments/assets/d59977e1-9fa6-4640-b5fb-62ad2b1c6489" /> | นายอภิรักษ์ นพเคราะห์ | 68070204 |
+|<img width="500" height="500" alt="856545198_1642390627387703_2608820112443213826_n" src="https://github.com/user-attachments/assets/6cee303d-147b-4aa9-9bc9-4b322cce2f37" /> | นายอภิรักษ์ นพเคราะห์ | 68070204 |
