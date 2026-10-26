@@ -313,8 +313,7 @@ function TeamSection() {
       <div className={`${containerClass} py-20 sm:py-[110px]`}>
         <div className="mb-11 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
           <div>
-            <SectionLabel>CONTRIBUTORS</SectionLabel>
-            <h2 className={headingClass}>THE PEOPLE<br />BEHIND THE PIXELS.</h2>
+            <h2 className={headingClass}>Contributors</h2>
           </div>
           <span className="font-pixel text-[8px]">IT KMITL / 2026</span>
         </div>
@@ -381,7 +380,7 @@ export default function App() {
         <BuildSection />
         <ToolsSection />
         <TeamSection />
-        <CallToAction />
+        {/* <CallToAction /> */}
       </main>
 
       <Footer />
